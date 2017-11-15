@@ -15,8 +15,28 @@
         "level": "alpha",
         "patch": 0
       }
-    }
+    },
+    "software": {
+      "display": {
+        "title": "Control panel",
+        "label": "control"
+      }
+    },
+    "timestamp": "2017-11-16T09:40:27+11:00"
   },
   "software": {
+    "base": {
+      "name": "control",
+      "publisher_namespace": "EnginesSystem",
+      "type_path": "control",
+      "service_handle_field": "control",
+      "parent_image": "engines/sinatra",
+      "run_as_user": "www-data",
+      "deployment_type": "worker",
+      "memory": {
+        "required": 97,
+        "recommended": 128
+      }
+    }
   }
 }
