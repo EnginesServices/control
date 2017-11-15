@@ -22,7 +22,7 @@
         "label": "control"
       }
     },
-    "timestamp": "2017-11-16T09:40:27+11:00"
+    "timestamp": "2017-11-16T09:47:00+11:00"
   },
   "software": {
     "base": {
@@ -37,6 +37,47 @@
         "required": 97,
         "recommended": 128
       }
-    }
+    },
+    "environment_variables": [
+      {
+        "name": "ENGINES_ADMIN_GUI_SYSTEM_API_URL",
+        "value": "https://_Engines_System(docker_ip):2380",
+        "mandatory": true,
+        "input": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "SYSTEM_RELEASE",
+        "value": "_Engines_System(release)",
+        "mandatory": true,
+        "input": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "FQDN_PORT",
+        "value": "control._Engines_System(default_domain):8484",
+        "input": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "DOMAIN",
+        "value": "_Engines_System(default_domain)",
+        "mandatory": true,
+        "input": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "ENGINES_ADMIN_GUI_SESSION_SECRET",
+        "value": "_Engines_System(random(64))",
+        "mandatory": true,
+        "input": {
+          "type": "string"
+        }
+      }
+    ]
   }
 }
