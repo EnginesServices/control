@@ -22,7 +22,7 @@
         "label": "control"
       }
     },
-    "timestamp": "2017-12-05T15:05:59+11:00"
+    "timestamp": "2017-12-05T15:48:26+11:00"
   },
   "software": {
     "base": {
@@ -107,12 +107,12 @@
             "name": "release",
             "mandatory": true,
             "input": {
-              "type": "select_with_input",
+              "type": "select",
               "collection": {
                 "items": {
-                  "current": "",
-                  "master": "",
-                  "production": ""
+                  "current": "current",
+                  "master": "master",
+                  "production": "producton"
                 }
               }
             }
