@@ -2,8 +2,8 @@
   "schema": {
     "type": "service_blueprint",
     "version": {
-      "major": 1,
-      "minor": 0
+      "major": 0,
+      "minor": 1
     },
     "origin": "Engines Developer Studio 0.2"
   },
@@ -22,7 +22,7 @@
         "label": "control"
       }
     },
-    "timestamp": "2017-11-16T10:05:29+11:00"
+    "timestamp": "2017-12-05T15:05:59+11:00"
   },
   "software": {
     "base": {
@@ -31,17 +31,17 @@
       "type_path": "control",
       "service_handle_field": "control",
       "parent_image": "engines/sinatra",
-      "run_as_user": "www-data",
       "deployment_type": "worker",
       "memory": {
         "required": 97,
         "recommended": 128
-      }
+      },
+      "run_as_user": "www-data"
     },
     "ports": [
       {
-        "port": 8001,
-        "external": 8485,
+        "port": "8001",
+        "external": "8485",
         "protocol": "tcp"
       }
     ],
@@ -94,6 +94,32 @@
         "mandatory": true,
         "input": {
           "type": "string"
+        }
+      }
+    ],
+    "actionators": [
+      {
+        "name": "set_release",
+        "label": "Set Release",
+        "return_type": "none",
+        "variables": [
+          {
+            "name": "release",
+            "mandatory": true,
+            "input": {
+              "type": "select_with_input",
+              "collection": {
+                "items": {
+                  "current": "",
+                  "master": "",
+                  "production": ""
+                }
+              }
+            }
+          }
+        ],
+        "script": {
+          "language": "sh"
         }
       }
     ]
