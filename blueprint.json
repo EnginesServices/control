@@ -22,7 +22,7 @@
         "label": "control"
       }
     },
-    "timestamp": "2017-12-06T09:35:08+11:00"
+    "timestamp": "2017-12-22T17:55:34+11:00"
   },
   "software": {
     "base": {
@@ -121,6 +121,19 @@
         ],
         "script": {
           "language": "sh"
+        }
+      },
+      {
+        "name": "release",
+        "label": "Current release",
+        "return_type": "plain_text"
+      },
+      {
+        "name": "clear_library_cache",
+        "label": "Clear library cache",
+        "return_type": "none",
+        "script": {
+          "content": "#!/bin/sh\r\n\r\nrm /home/app/data/v0/library.json"
         }
       }
     ]
