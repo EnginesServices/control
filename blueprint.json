@@ -22,7 +22,7 @@
         "label": "control"
       }
     },
-    "timestamp": "2017-12-22T18:15:03+11:00"
+    "timestamp": "2018-03-22T11:59:39+11:00"
   },
   "software": {
     "base": {
@@ -124,7 +124,7 @@
         }
       },
       {
-        "name": "release",
+        "name": "which_release",
         "label": "Current release",
         "return_type": "plain_text"
       },
